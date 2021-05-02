@@ -1,4 +1,32 @@
-   let money,time;
+'use strict';
+
+let startCalculation = document.getElementById("start"),
+    budget = document.getElementsByClassName("budget-value")[0],
+    dayBudget = document.getElementsByClassName("daybudget-value")[0],
+    levelIncome = document.getElementsByClassName("level-value")[0],
+    expenses = document.getElementsByClassName("expenses-value")[0],
+    optionalExpenses = document.getElementsByClassName("optionalexpenses-value")[0],
+    income = document.getElementsByClassName("income-value")[0],
+    monthSavings = document.getElementsByClassName("monthsavings-value")[0],
+    yaersSavings = document.getElementsByClassName("yaerssavings-value")[0],
+
+
+    expensesItem = document.getElementsByClassName("expenses-item"),
+    expensesBtn = document.getElementsByTagName("button")[0],
+    optionalExpensesBtn = document.getElementsByTagName("button")[1],
+    countBtn = document.getElementsByTagName('button')[2],
+    optionalExpensesItem = document.querySelectorAll('.optionalexpenses-item'),
+	incomeItem = document.querySelector('.choose-income'),
+	checkSavings = document.querySelector('#savings'),
+	sumValue = document.querySelector('.choose-sum'),
+    percentValue = document.querySelector('.choose-percent'),
+    yearValue = document.querySelector('.year-value'),
+    monthValue = document.querySelector('.month-value'),
+    dayValue = document.querySelector('.day-value');
+
+
+
+let money,time;
    
    function start(){
      money = +prompt("Ваш бюджет за месяц?",'');
